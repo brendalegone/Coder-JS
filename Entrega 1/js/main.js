@@ -2,15 +2,14 @@
 
 function elegirPiedraPapelTijera() {
 
-    const eleccionComputadora = piedra;
-
-    let opcion1 = papel;
-    let opcion2 = tijera;
+    const eleccionComputadora = "piedra";
+    let opcion1 = "papel";
+    let opcion2 = "tijera";
     let ganaste = false;
 
-    // ciclo
     while (ganaste === false) {
-        const eleccionUsuario = prompt("Juguemos! Piedra, papel o tijera? Escribe tu respuesta");
+
+        const eleccionUsuario = prompt("Juguemos! Piedra, papel o tijera? Escribe tu respuesta").toLowerCase();
     
         if (eleccionUsuario === opcion1) {
             alert("Muy bien! Ganaste");
