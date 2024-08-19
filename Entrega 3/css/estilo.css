@@ -392,7 +392,7 @@ header {
       padding-top: 30px;
       color: #ffffff; }
 
-  #servicios .combos {
+  #servicios .contenedorCombos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -400,20 +400,20 @@ header {
     justify-content: center;
     color: #ffffff; }
 
-    #servicios .combos h4 {
+    #servicios .contenedorCombos h4 {
       font-size: 1.5rem;
       font-weight: 800;
       text-transform: uppercase;
       margin: 0; }
 
-    #servicios .combos .pack {
+    #servicios .contenedorCombos .pack {
       display: inline-block;
       text-align: center;
       width: 200px;
       height: 430px;
       padding: 0 80px; }
 
-    .combos .precioPack {
+    .contenedorCombos .precioPack {
       color: #FFCA5F;
       font-size: 1.5rem;
       font-weight: 800;
@@ -421,19 +421,19 @@ header {
         padding-top: 1rem;
     }
 
-      #servicios .combos .pack .contenedorImgPack {
+      #servicios .contenedorCombos .pack .contenedorImgPack {
         display: inline-block;
         width: 200px;
         height: 200px; }
 
-        #servicios .combos .pack .contenedorImgPack .imgPacks {
+        #servicios .contenedorCombos .pack .contenedorImgPack .imgPacks {
           width: 100%; }
 
-      #servicios .combos .pack .contenidoCaja {
+      #servicios .contenedorCombos .pack .contenidoCaja {
         margin: 0;
         padding-top: 1rem; }
 
-      #servicios .combos .pack .botonLoQuiero {
+      #servicios .contenedorCombos .pack .botonLoQuiero {
         text-decoration: none;
         display: inline-block;
         background-color: #F63340;
@@ -445,7 +445,7 @@ header {
         margin-bottom: 10px;
         transition: all 0.2s; }
 
-      #servicios .combos .pack .botonLoQuiero:hover {
+      #servicios .contenedorCombos .pack .botonLoQuiero:hover {
         background-color: #E3303C;
         box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
         transform: scale(1.1); }

@@ -7,28 +7,28 @@ const carrito = [];
 const packs = [
     {
         id: "combo1",
-        img: "../multimedia/pack1.png",
+        img: "multimedia/pack1.png",
         titulo: "Combo Aviador",
         descripcion: "1 libro de lectura<br> + libro de actividades",
         precio: 8000,
     },
     {
         id: "combo2",
-        img: "../multimedia/pack2.png",
+        img: "multimedia/pack2.png",
         titulo: "Combo Artista",
         descripcion: "2 libros de lectura",
         precio: 14000,
     },
     {
         id: "combo3",
-        img: "../multimedia/pack3.png",
+        img: "multimedia/pack3.png",
         titulo: "Combo Astronauta",
         descripcion: "3 libros de lectura<br> + libro de actividades",
         precio: 18000,
     },
 ];
 
-const combos = document.querySelector("#combos");
+const contenedorCombos = document.querySelector("#contenedorCombos");
 
 
 // funcion para recorrer el array de los packs
@@ -44,7 +44,6 @@ const combos = document.querySelector("#combos");
             <p class="contenidoCaja">${pack.descripcion}</p>
             <p class="precioPack">${pack.precio}</p>
             <a class="botonLoQuiero" href="">¡LO QUIERO!</a>
-            
         `;
 
         combos.append(div);
