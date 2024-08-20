@@ -81,15 +81,17 @@ header {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background-color: #F63340;
   border-radius: 50%;
-  align-content:space-around;
-  text-align: center;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .botonFlotante:hover {
@@ -97,12 +99,59 @@ header {
   box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.2);
   transform: scale(1.1); }
 
+
+
 .botonFlotante .iconoCarrito {
   padding-right: 5px;
-  width: 40%;
-  align-content:space-around;
-  text-align: center;
+  width: 30%;
 }
+
+.botonFlotante .cantidadCarrito {
+color: #ffffff;
+font-size: 1.2rem;
+margin: 0;
+}
+
+/* seccion carrito */
+#compra {
+  background-image: url(../multimedia/fondPasos.jpg);
+  background-position: center center;
+  background-size: contain;
+  padding: 50px 80px;
+  height: 700px; }
+
+  #compra h2 {
+    text-align: center;
+    text-transform: uppercase; }
+
+#contenedorCarritoCombos {
+  margin: 0; }
+
+#contenedorCarritoCombos .packEnCarrito {
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;
+  background-color: #ffffff;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1); }
+
+#contenedorCarritoCombos .packEnCarrito .contenedorImgPack {
+  width: 150px;
+  height: 150px; }
+
+#contenedorCarritoCombos .packEnCarrito .contenedorImgPack .imgPacks {
+  width: 100%; }
+
+#contenedorCarritoCombos .packEnCarrito .contenidoCaja {
+  margin: 0;
+  padding-top: 1rem; }
+
+
+
+
+
+
 
 
 /* index */
@@ -276,99 +325,6 @@ header {
       transform: scale(1.2); }
 
 
-
-/* me sumo */
-#meSumo {
-  background-image: url(../multimedia/fondoMeSumo.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding-left: 80px;
-  padding-right: 80px;
-  margin-top: 0px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  height: 700px; }
-
-  #meSumo .contenidoMeSumo {
-    display: inline-block;
-    width: 430px;
-    height: 280px;
-    margin-right: 80px;
-    align-self: center; }
-
-    #meSumo .contenidoMeSumo h2 {
-      font-family: "Fredoka One", cursive;
-      font-size: 3rem;
-      letter-spacing: 3px;
-      margin: 0;
-      line-height: 55px; }
-
-    #meSumo .contenidoMeSumo p {
-      color: #626262;
-      line-height: 20px;
-      margin: 0;
-      padding-top: 10px;
-      font-size: 1rem; }
-
-    #meSumo .contenidoMeSumo .botonMeSumo {
-      display: inline-block;
-      background-color: #F63340;
-      color: #ffffff;
-      padding: 15px 40px;
-      border-radius: 50px;
-      font-weight: 700;
-      margin-top: 30px;
-      margin-bottom: 10px; }
-
-    #meSumo .contenidoMeSumo .botonMeSumo:hover {
-      background-color: #E3303C;
-      box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
-      transform: scale(1.1); }
-
-    #meSumo .contenidoMeSumo a {
-      text-decoration: none;
-      transition: all 0.2s; }
-
-  #meSumo .imgNene {
-    width: 500px;
-    height: 530px;
-    text-align: right; }
-
-    #meSumo .imgNene .imagen {
-      width: 100%; }
-
-
-
-/* FRASE */
-#frase {
-  background-image: url(../multimedia/FondoFrase.jpg);
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding-left: 80px;
-  padding-right: 80px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-  #frase div {
-    text-align: center;
-    padding: 0 400px;
-    color: #ffffff; }
-
-    #frase div h4 {
-      margin: 0;
-      font-size: 1.30rem;
-      font-weight: 600;
-      line-height: 30px; }
-
-    #frase div h6 {
-      font-size: 1rem;
-      font-weight: 400; }
 
 
 

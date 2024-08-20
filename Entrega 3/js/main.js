@@ -1,8 +1,4 @@
 
-
-// array carrito
-const carrito = [];
-
 // obj productos
 const packs = [
     {
@@ -15,7 +11,7 @@ const packs = [
     {
         id: "combo2",
         img: "multimedia/pack2.png",
-        titulo: "Combo Artista",
+        titulo: "Combo<br>Artista",
         descripcion: "2 libros de lectura",
         precio: 14000,
     },
@@ -32,6 +28,7 @@ const contenedorCombos = document.querySelector("#contenedorCombos");
 
 
 // funcion para recorrer el array de los packs
+function cargarCombos(){
     packs.forEach((pack) => {
 
         const div = document.createElement("div");
@@ -40,13 +37,66 @@ const contenedorCombos = document.querySelector("#contenedorCombos");
             <div class="contenedorImgPack">
                  <img class="imgPacks" src="${pack.img}" alt="pack1">
             </div>
-            <h4>${producto.titulo}</h4>
+            <h4>${pack.titulo}</h4>
             <p class="contenidoCaja">${pack.descripcion}</p>
             <p class="precioPack">${pack.precio}</p>
-            <a class="botonLoQuiero" href="">¡LO QUIERO!</a>
+            <button class="botonLoQuiero" id="${pack.id}">¡LO QUIERO!</button>
         `;
 
-        combos.append(div);
+        contenedorCombos.append(div);
 
     });
+}
+    
+cargarCombos();
 
+
+let botonLoQuiero = document.querySelectorAll(".botonLoQuiero");
+
+botonLoQuiero.forEach((boton) => {
+    boton.addEventListener("click", agregarAlCarrito);
+
+});
+
+
+// array carrito
+
+let combosEnElCarrito;
+
+const combosEnElCarritoLS = JSON.parse(localStorage.getItem("combosEnElCarrito"));
+
+if (combosEnElCarritoLS) {
+    combosEnElCarrito = combosEnElCarritoLS;
+} else {
+    combosEnElCarrito = [];
+}
+
+const carrito = [];
+
+function agregarAlCarrito(e) {
+
+    const idBoton = e.currentTarget.id;
+    const comboAgregado = packs.find(pack => pack.id === idBoton);
+    
+    if (carrito.some(pack => pack.id === idBoton)){
+        const index = carrito.findIndex(pack => pack.id === idBoton);
+        carrito[index].cantidad++;
+    } else {
+        comboAgregado.cantidad = 1;
+        carrito.push(comboAgregado);
+    }
+
+    actualizarNumeroCarrito();
+
+    localStorage.setItem("combosEnElCarrito", JSON.stringify(carrito));
+}
+
+
+const cantidadCarrito = document.querySelector(".cantidadCarrito");
+
+function actualizarNumeroCarrito() {
+
+    let nuevaCantidadCarrito = carrito.reduce((acc, pack) => acc + pack.cantidad, 0);
+    cantidadCarrito.innerText = nuevaCantidadCarrito;
+
+}
