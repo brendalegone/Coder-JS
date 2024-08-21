@@ -4,7 +4,7 @@ const packs = [
     {
         id: "combo1",
         img: "multimedia/pack1.png",
-        titulo: "Combo Aviador",
+        titulo: "Combo<br>Aviador",
         descripcion: "1 libro de lectura<br> + libro de actividades",
         precio: 8000,
     },
@@ -18,7 +18,7 @@ const packs = [
     {
         id: "combo3",
         img: "multimedia/pack3.png",
-        titulo: "Combo Astronauta",
+        titulo: "Combo<br>Astronauta",
         descripcion: "3 libros de lectura<br> + libro de actividades",
         precio: 18000,
     },
@@ -28,7 +28,7 @@ const contenedorCombos = document.querySelector("#contenedorCombos");
 
 
 // funcion para recorrer el array de los packs
-function cargarCombos(){
+function cargarCombos() {
     packs.forEach((pack) => {
 
         const div = document.createElement("div");
