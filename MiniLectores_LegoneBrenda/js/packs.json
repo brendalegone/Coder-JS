@@ -1,0 +1,24 @@
+
+[
+    {
+        "id": "combo1",
+        "img": "multimedia/pack1.png",
+        "titulo": "Combo<br>Aviador",
+        "descripcion": "1 libro de lectura<br> + libro de actividades",
+        "precio": 8000
+    },
+    {
+        "id": "combo2",
+        "img": "multimedia/pack2.png",
+        "titulo": "Combo<br>Artista",
+        "descripcion": "2 libros de lectura",
+        "precio": 14000
+    },
+    {
+        "id": "combo3",
+        "img": "multimedia/pack3.png",
+        "titulo": "Combo<br>Astronauta",
+        "descripcion": "3 libros de lectura<br> + libro de actividades",
+        "precio": 18000
+    }
+]
